@@ -5,15 +5,15 @@ EXPOSE 3000
 ENV HOME=/home/app
 ENV TZ=America/Sao_Paulo
 # Creating the application directory and granting permissions
-ADD package.json $HOME/adashmin-backend/
+ADD package.json $HOME/adashmin-api/
 #RUN chown -R app:app $HOME/*
 # Setting the user and working directory and installing the dependencies
 #USER app
-WORKDIR $HOME/adashmin-backend
+WORKDIR $HOME/adashmin-api
 RUN npm install
 # Setting the user back to root and copying the application files to the container
 #USER root
-ADD . $HOME/adashmin-backend
+ADD . $HOME/adashmin-api
 #RUN chown -R app:app $HOME/*
 #USER app
 # Running the application
