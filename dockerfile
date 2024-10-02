@@ -1,6 +1,6 @@
 # Using Node.js 20 image and exposing port 3000
 FROM node:20-alpine3.20
-EXPOSE 3000
+EXPOSE 3004
 # Setting environment variables
 ENV HOME=/home/app
 ENV TZ=America/Sao_Paulo

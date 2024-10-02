@@ -8,6 +8,6 @@ dotenv.config({ path: process.cwd() + '/.env.development' });
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.useGlobalFilters(new MongooseExceptionFilter());
-  await app.listen(3000);
+  await app.listen(3004);
 }
 bootstrap();
