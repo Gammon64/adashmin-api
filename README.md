@@ -12,7 +12,9 @@ Após clonar o projeto, execute o comando `npm install` para instalar as depend�
 
 A versão em produção está acessando um servidor hospedado pelo MongoDB Atlas, por motivos de segurança o repositório não contém as variáveis para acesso.
 
-Em vista de testes locais, assegure-se de que tenha uma instância do MongoDB sendo executada, caso não houver, o [site oficial](https://www.mongodb.com/pt-br) oferece algumas opções, escolha a que melhor te atender, crie no projeto um arquivo `.env` ou `.env.development.local` com as seguintes variáveis, substituindo com os seus valores:
+Em vista de testes locais, assegure-se de que tenha uma instância do MongoDB sendo executada, caso não houver, o [site oficial](https://www.mongodb.com/pt-br) oferece algumas opções.
+Também estará disponível um arquivo Compose para inicialização de um container Docker rodando MongoDb.
+Crie no projeto um arquivo `.env` ou `.env.development.local` com as seguintes variáveis, substituindo com os seus valores:
 
 ```Basic
 MONGODB_URI="[mongodb ou mongodb+srv]/[usuario]:[senha]@[127.0.0.1 ou cluster*.*******.mongodb.net]/[adashmin]"
@@ -45,19 +47,3 @@ bun [comando]
 - **POST:** `/api/funcionarios`: Cria um novo funcionário com base nos dados fornecidos no corpo da requisição.
 - **PATCH:** `/api/funcionarios/:id`: Atualiza as informações de um funcionário específico com base no ID fornecido e nos dados fornecidos no corpo da requisição.
 - **DELETE:** `/api/funcionarios/:id`: Exclui um funcionário específico com base no ID fornecido.
-
-# Ambientes em produção
-
-> **AVISO:** Os ambientes foram desativados e não estão mais disponíveis. Essa sessão foi mantida apenas para informar como foi feito.
-
-Ambos ambientes se encontram hospedados em núvem, usando planos gratuitos.
-
-O backend se encontra hospedado na [Render](https://render.com/) e ouvindo requisições através do endereço:
-
-[`https://adashmin.onrender.com`](https://adashmin.onrender.com)
-
-> **AVISO:** Por se tratar de uma instancia gratuita, ela ficará inativa quando não houver requisições, o que pode atrasar as solicitações em 50 segundos ou mais.
-
-Quanto ao frontend, está hospedado na [Vercel](https://vercel.com/) e pode ser visualizado no endereço:
-
-[`https://adashmin.vercel.app/`](https://adashmin.vercel.app/)

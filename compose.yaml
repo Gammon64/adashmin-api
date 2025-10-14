@@ -1,0 +1,14 @@
+services:
+  mongodb:
+    image: mongo:latest
+    container_name: adashmongodb
+    ports:
+      - "27017:27017" # Map host port 27017 to container port 27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: adashmin
+      MONGO_INITDB_ROOT_PASSWORD: bebaagua64
+    volumes:
+      - mongodb_data:/data/db # Persist data outside the container
+volumes:
+  mongodb_data:
+    name: mongodb_adashmin
